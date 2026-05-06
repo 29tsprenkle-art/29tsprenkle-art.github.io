@@ -1,64 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Tjs webpage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text",id=dragthese);
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+    </script>
 
     <style>
-       
-       h1 {
-            text-align: center;
-        }
-
         body {
-            font-family: Saira Stencil;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: lightgreen;
         }
-section {
-    width: 80%;
-    margin: auto;
-    border: 2px solid black;
-    padding: 10px;
-}
 
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 10px 20px 10px 20px;
+            background-color: red;
+            padding: 10px;
+            border: 5px ridge black;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        nav ul li:hover {
+            background-color: lightskyblue;
+            margin: 0px 0px 0px 0px;
+            padding: 20px 30px 20px 30px;
+            transition: 0.5s;
+            cursor: help;
+
+        }
+
+        article {
+            background-color: burlywood;
+            width: 75%;
+            border-width: 5px;
+            border-style: dotted;
+            border-color: gray;
+            border-radius: 10px;
+            padding: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>TJs web disaster</h1>
-        <nav>
-            <details>
-                <summary>navigation bar</summary>
-                <ul>
-                    <li><a href="index.html">homepage</a></li>
-                    <li><a href="about.html">aboutpage</a></li>
-                    <li><a href="get to school 7/index.html">gamepage</a></li>
-                    <li><a href="https://www.neopets.com">neopets</a></li>
-                </ul>
-            </details>
-        </nav>
-    </header>
-
-<section>    
+    <h1>page top header</h1>
+    <nav>
+        <ul id="dragthese">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </nav>
     <article>
-        <h2>welcome to my webpage</h2>
-        <time datetime="2026-04-07">april 7th</time>
-        <p>Some things about by webpage</p>
+        <h2>article title.</h2>
+        <p>some text.</p>
     </article>
-    
-    <article>
-        <h2>Other stuff</h2>
-        <p>My names is thaddeaus sprenkle jr but most people call me TJ i am in a coding class at york tech school of
-            technology</p>
-            <p>I like terraria twin go to the about page for more</p>
-        </article>
-    </section>
-        
-    <footer>made by TJ sprenkle 2026</footer>
-
+    <footer>
+        &copy; 2026
+    </footer>
 </body>
 
 </html>
