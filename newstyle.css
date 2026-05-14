@@ -1,12 +1,41 @@
-
 h1 {
-    color: aquamarine;
+    color: red;
     display: flex;
     justify-content: center;
 }
 
-   
+nav ul li {
+ background-color: red;
+ margin-top: 20px;
+ width: 100px;
+ outline-color: black;
+ outline-width: 5px; 
+ outline-style: auto;
+}
+
+body{
+    background-color: rgb(196, 212, 247);
     
-section {
-    background-color: burlywood;
+}
+nav img{
+  outline-color: black;
+  outline-width: 5px;
+  outline-style: auto;
+  display: flex;
+  justify-content: end;
+}
+
+img{
+  outline-color: black;
+  outline-width: 5px;
+  outline-style: auto;
+  
+}
+
+h3 {
+color: red;
+}
+
+h4{
+  color: red;
 }

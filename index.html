@@ -1,90 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function dragstartHandler(ev) {
-            ev.dataTransfer.setData("text",id=dragthese);
-        }
-
-        function dragoverHandler(ev) {
-            ev.preventDefault();
-        }
-
-        function dropHandler(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-        }
-
-    </script>
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: lightgreen;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-evenly;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 10px 20px 10px 20px;
-            background-color: red;
-            padding: 10px;
-            border: 5px ridge black;
-            border-radius: 10px;
-            transition: 0.5s;
-        }
-
-        nav ul li:hover {
-            background-color: lightskyblue;
-            margin: 0px 0px 0px 0px;
-            padding: 20px 30px 20px 30px;
-            transition: 0.5s;
-            cursor: help;
-
-        }
-
-        article {
-            background-color: burlywood;
-            width: 75%;
-            border-width: 5px;
-            border-style: dotted;
-            border-color: gray;
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>page top header</h1>
-    <nav>
-        <ul id="dragthese">
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-        </ul>
-    </nav>
-    <article>
-        <h2>article title.</h2>
-        <p>some text.</p>
-    </article>
-    <footer>
-        &copy; 2026
-    </footer>
-</body>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/game.css">
+        <title>get to school 7</title>
+    </head>
+    <body style="background-color: black">
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>
